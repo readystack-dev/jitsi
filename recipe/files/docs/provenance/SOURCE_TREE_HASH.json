@@ -1,0 +1,9 @@
+{
+  "schema": "kitforge.source_tree_hash.v1",
+  "slug": "jitsi",
+  "repo": "https://github.com/jitsi/jitsi-meet",
+  "ref": "stable/jitsi-meet_11248",
+  "commit": "f765042bf280cbd7dcd4a9bbdb63b09e9e4d3259",
+  "tree_listing_sha256": "348e977d549628dbcb5c66aa95a57722a9fe8a1415c90680674fb63e9d1ba626",
+  "file_count": 3159
+}
