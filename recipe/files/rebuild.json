@@ -16,8 +16,8 @@
     "context": ".",
     "dockerfile": "Dockerfile.offline.pinned",
     "mtime_policy": "clamp",
-    "source_date_epoch": 1795319339,
-    "tree_hash": "sha256:513b3169d1f399592a64d1408f9b3e05bd66cd6c0e278848fc939897ed38304a"
+    "source_date_epoch": 1795543181,
+    "tree_hash": "sha256:bb39154b4f2371388ce1d35cb02945eaf7e12d816c56bcc0f4897aab3f68d181"
   },
   "probe": {
     "http_path": "/",
@@ -26,8 +26,8 @@
   },
   "schema": "readystack-rebuild-bundle/v0.1",
   "subject": {
-    "config_digest": "sha256:c5fed24f1d57c2572b5df09c1a042eb31695a538ac5a0208d8c9770f9823ff69",
-    "image_manifest_digest": "sha256:d23dd15235711b367099e6120cd89626fbf15b35564a98493acb1ac8e7b34336",
-    "name": "docker.io/readystack/jitsi:stable-11248-CE-ubuntu24.04-r7"
+    "config_digest": "sha256:a9502ac7550d3b00be7ae3e370b66819c9fa2b3ca2ac22b80f6891686aad2d5e",
+    "image_manifest_digest": "sha256:b1dfe9c631559da8eea17b975b163a470754fa306a8fede049bab1d6802b3e19",
+    "name": "docker.io/readystack/jitsi:stable-11248-CE-ubuntu24.04-r8"
   }
 }

@@ -34,10 +34,15 @@
       "min_version": "1.24.0-2ubuntu7.20",
       "package": "nginx-common",
       "reason": "UBUNTU-CVE-2026-113425, UBUNTU-CVE-2026-118899, UBUNTU-CVE-2026-123007, UBUNTU-CVE-2026-123633 \u2026: nginx-common 1.24.0-2ubuntu7.19 -> 1.24.0-2ubuntu7.20"
+    },
+    {
+      "min_version": "0.10.6-2ubuntu0.6",
+      "package": "libssh-4",
+      "reason": "USN-9187-1: libssh-4 0.10.6-2ubuntu0.5 -> 0.10.6-2ubuntu0.6"
     }
   ],
   "build_method": "source-rebuild-node",
-  "chain_id": 1191,
+  "chain_id": 1225,
   "dep_bumps": [],
   "expected_residuals": [],
   "images": [
@@ -88,9 +93,9 @@
     "repo": "https://github.com/jitsi/jitsi-meet",
     "retarget_tag_pattern": "stable/jitsi-meet_(\\d+)",
     "runtime_node": false,
-    "source_date_epoch": 1795319339,
+    "source_date_epoch": 1795543181,
     "source_date_epoch_basis": "release-cut",
-    "source_date_epoch_provenance": "the time release stable-11248-CE-ubuntu24.04-r7 was cut (2026-11-22T03:48:59Z), by scripts/retarget.py --rev-bump: ReadyStack dates an image by when its release was packaged (owner 2026-11-10), recorded here once and used by every rebuild of the release; it builds upstream commit f765042bf280, dated 2026-09-10T22:52:13Z (source.commit_epoch)."
+    "source_date_epoch_provenance": "the time release stable-11248-CE-ubuntu24.04-r8 was cut (2026-11-24T17:59:41Z), by scripts/rerelease-agenda.py: ReadyStack dates an image by when its release was packaged (owner 2026-11-10), recorded here once and used by every rebuild of the release; it builds upstream commit f765042bf280, dated 2026-09-10T22:52:13Z (source.commit_epoch)."
   },
   "version": "stable-11248"
 }

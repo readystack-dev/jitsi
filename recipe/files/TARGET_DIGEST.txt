@@ -1,6 +1,6 @@
-image_manifest_digest=sha256:d23dd15235711b367099e6120cd89626fbf15b35564a98493acb1ac8e7b34336
-config_digest=sha256:c5fed24f1d57c2572b5df09c1a042eb31695a538ac5a0208d8c9770f9823ff69
-tag=readystack/jitsi:stable-11248-CE-ubuntu24.04-r7
+image_manifest_digest=sha256:b1dfe9c631559da8eea17b975b163a470754fa306a8fede049bab1d6802b3e19
+config_digest=sha256:a9502ac7550d3b00be7ae3e370b66819c9fa2b3ca2ac22b80f6891686aad2d5e
+tag=readystack/jitsi:stable-11248-CE-ubuntu24.04-r8
 probe_port=8080
 probe_path=/
 probe_timeout=180

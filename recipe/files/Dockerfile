@@ -13,7 +13,7 @@ RUN --mount=type=bind,source=vendored/debs,target=/tmp/debs \
     { [ -z "$bad" ] || { echo "vendored debs not installed at their vendored version:$bad" >&2; false; }; } && \
     rm -rf /var/lib/apt/lists/* \
            /var/log/dpkg.log /var/log/alternatives.log /var/log/apt /var/cache/ldconfig/aux-cache /var/cache/fontconfig
-ARG SOURCE_DATE_EPOCH=1795319339
+ARG SOURCE_DATE_EPOCH=1795543181
 RUN groupadd -r jitsi && useradd -r -g jitsi -d /var/lib/jitsi-web -m jitsi && \
     : "${SOURCE_DATE_EPOCH:?SOURCE_DATE_EPOCH must be set for a reproducible build}" && \
     sed -ri "s/^([^:]*:[^:]*):[0-9]*:/\1:$((SOURCE_DATE_EPOCH/86400)):/" /etc/shadow && \
@@ -27,7 +27,7 @@ LABEL org.opencontainers.image.title="Jitsi Meet"
 LABEL org.opencontainers.image.description="The Jitsi Meet browser frontend built from source, served by non-root nginx; needs prosody, jicofo and jitsi-videobridge to host meetings"
 LABEL org.opencontainers.image.source="https://github.com/jitsi/jitsi-meet"
 LABEL org.opencontainers.image.revision="f765042bf280cbd7dcd4a9bbdb63b09e9e4d3259"
-LABEL org.opencontainers.image.version="stable-11248-CE-ubuntu24.04-r7"
+LABEL org.opencontainers.image.version="stable-11248-CE-ubuntu24.04-r8"
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 LABEL org.opencontainers.image.vendor="ReadyStack.dev"
 LABEL readystack.product="jitsi"
