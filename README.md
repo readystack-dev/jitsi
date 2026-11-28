@@ -6,13 +6,13 @@
 
 # Jitsi Meet: ReadyStack build kit
 
-The offline build kit for the Docker image `readystack/jitsi:stable-11248-CE-ubuntu24.04-r8`. It holds what the image is built from (upstream source, base images, toolchain, pinned dependencies) and the documents, so the image can be rebuilt with no network access (`docker build --network=none`).
+The offline build kit for the Docker image `readystack/jitsi:stable-11248-CE-ubuntu24.04-r9`. It holds what the image is built from (upstream source, base images, toolchain, pinned dependencies) and the documents, so the image can be rebuilt with no network access (`docker build --network=none`).
 
-- Release: [stable-11248-CE-ubuntu24.04-r8](https://github.com/readystack-dev/jitsi/releases/tag/stable-11248-CE-ubuntu24.04-r8)
-- Image: [`docker.io/readystack/jitsi:stable-11248-CE-ubuntu24.04-r8`](https://hub.docker.com/r/readystack/jitsi/tags), manifest digest `sha256:b1dfe9c631559da8eea17b975b163a470754fa306a8fede049bab1d6802b3e19`
+- Release: [stable-11248-CE-ubuntu24.04-r9](https://github.com/readystack-dev/jitsi/releases/tag/stable-11248-CE-ubuntu24.04-r9)
+- Image: [`docker.io/readystack/jitsi:stable-11248-CE-ubuntu24.04-r9`](https://hub.docker.com/r/readystack/jitsi/tags), manifest digest `sha256:4c6a24b405ec08947bd050e9541b2618ac001a7d672885acedeb986afd761364`
 - Product page: https://readystack.dev/products/jitsi
 - Source and build recipe: https://readystack.dev/products/jitsi/recipe
-- Build trail: https://readystack.dev/products/jitsi/trail/stable-11248-CE-ubuntu24.04-r8
+- Build trail: https://readystack.dev/products/jitsi/trail/stable-11248-CE-ubuntu24.04-r9
 - Defects: this repository's Issues (defects recorded from 25 November 2026 on) and https://readystack.dev/defects.html?product=jitsi
 
 ## The image
@@ -31,12 +31,12 @@ From the upstream project's own description: https://github.com/jitsi/jitsi-meet
 
 ## This release
 
-- Docker Scout policy grade at release: **A** (94%), graded 2026-11-25 with `docker scout policy` (CLI 1.26.0, docker-default configuration).
+- Docker Scout policy grade at release: **A** (94%), graded 2026-11-28 with `docker scout policy` (CLI 1.26.0, docker-default configuration).
   - Docker Scout counts 104 packages with copyleft licences (GPL, LGPL, MPL), all of them operating-system packages (it counts only packages whose licence it can read; the SBOM lists every component).
 - Signed with ReadyStack's release key (fingerprint `04daa92344a52dbc`): https://readystack.dev/keys/cosign.pub.
 - Runs as a non-root user (`jitsi`).
 - Attestations on the image: an SPDX SBOM and SLSA provenance v1.
-- Rebuilt from this kit with network egress blocked on 2026-11-25; the rebuilt image digest is the published one.
+- Rebuilt from this kit with network egress blocked on 2026-11-28; the rebuilt image digest is the published one.
 - Base: Ubuntu 24.04.
 
 The current grade, measured again every day, is on https://readystack.dev/products/jitsi.
@@ -45,7 +45,7 @@ Jitsi Meet is distributed under its upstream licence (Apache-2.0); the kit conta
 
 ## Download
 
-From the [stable-11248-CE-ubuntu24.04-r8 release](https://github.com/readystack-dev/jitsi/releases/tag/stable-11248-CE-ubuntu24.04-r8): `ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.tar.gz` (514.2 MB), SHA-256 `1c88255da594908a8aa138e1c57a694bd4075feb2ddff998eb0249682f2b064c`.
+From the [stable-11248-CE-ubuntu24.04-r9 release](https://github.com/readystack-dev/jitsi/releases/tag/stable-11248-CE-ubuntu24.04-r9): `ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.tar.gz` (514.2 MB), SHA-256 `b88c0de019e4a0e146fc76f0fff6c3111c8ef14974e64a25e38205baaf2d97ee`.
 
 ```sh
 sha256sum --check --ignore-missing SHA256SUMS
@@ -57,18 +57,18 @@ The rebuild statement is signed with the ReadyStack release key. Check the signa
 
 ```sh
 cosign verify-blob --key https://readystack.dev/keys/cosign.pub \
-  --bundle ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.rebuild.json.sigstore ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.rebuild.json
+  --bundle ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.rebuild.json.sigstore ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.rebuild.json
 ```
 
 Unpack with `-p` so file modes are kept, then follow the kit's own README.md and docs/REBUILD.md:
 
 ```sh
-tar -xpzf ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.tar.gz
-cd stable-11248-CE-ubuntu24.04-r8
+tar -xpzf ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.tar.gz
+cd stable-11248-CE-ubuntu24.04-r9
 less README.md docs/REBUILD.md
 ```
 
-The build trail (`ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.trail.json`, signed the same way, and its Markdown copy) records how this release was built and checked.
+The build trail (`ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.trail.json`, signed the same way, and its Markdown copy) records how this release was built and checked.
 
 ## This repository
 

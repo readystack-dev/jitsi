@@ -1,6 +1,6 @@
-# Build kit for `readystack/jitsi:stable-11248-CE-ubuntu24.04-r8`
+# Build kit for `readystack/jitsi:stable-11248-CE-ubuntu24.04-r9`
 
-This archive rebuilds the linux/amd64 image `readystack/jitsi:stable-11248-CE-ubuntu24.04-r8` from its own contents, with the network off, and checks the result against the image digest ReadyStack published, `sha256:b1dfe9c631559da8eea17b975b163a470754fa306a8fede049bab1d6802b3e19` (also in `TARGET_DIGEST.txt`). It holds everything the build needs, not the image itself.
+This archive rebuilds the linux/amd64 image `readystack/jitsi:stable-11248-CE-ubuntu24.04-r9` from its own contents, with the network off, and checks the result against the image digest ReadyStack published, `sha256:4c6a24b405ec08947bd050e9541b2618ac001a7d672885acedeb986afd761364` (also in `TARGET_DIGEST.txt`). It holds everything the build needs, not the image itself.
 
 Every release of this kit, its recipe and its defect issues are published at https://github.com/readystack-dev/jitsi; the product page is https://readystack.dev/products/jitsi.
 
@@ -9,8 +9,8 @@ Every release of this kit, its recipe and its defect issues are published at htt
 You need linux/amd64 Docker with `buildx` 0.30 or later, `jq` and `tar` (docs/REBUILD.md lists the rest, if any, and the hardware ReadyStack used).
 
 ```
-tar -xpzf ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.tar.gz    # -p keeps each file's mode
-cd stable-11248-CE-ubuntu24.04-r8
+tar -xpzf ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.tar.gz    # -p keeps each file's mode
+cd stable-11248-CE-ubuntu24.04-r9
 ./BUILD_OFFLINE.sh            # builds with the network off, from this archive alone
 ./VERIFY_OFFLINE.sh           # compares the rebuilt digest with the published one, then checks the image
 ```
@@ -25,8 +25,8 @@ ReadyStack signs this archive's `rebuild.json` with its release key once the fin
 
 ```
 curl -fsSLo ../cosign.pub https://readystack.dev/keys/cosign.pub
-curl -fsSLo ../ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.rebuild.json.sigstore https://readystack.dev/api/kit/jitsi/stable-11248-CE-ubuntu24.04-r8/files/ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.rebuild.json.sigstore
-python3 docs/rebuild-bundle/rebuild_bundle.py validate . --key ../cosign.pub --signature ../ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r8.rebuild.json.sigstore
+curl -fsSLo ../ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.rebuild.json.sigstore https://readystack.dev/api/kit/jitsi/stable-11248-CE-ubuntu24.04-r9/files/ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.rebuild.json.sigstore
+python3 docs/rebuild-bundle/rebuild_bundle.py validate . --key ../cosign.pub --signature ../ReadyStack-jitsi-stable-11248-CE-ubuntu24.04-r9.rebuild.json.sigstore
 ```
 
 `validate` needs Python 3 and cosign. Without building anything it checks the signature over `rebuild.json`, every file's checksum, the tree hash over every file's path, mode and content, each base image layout's digest and the builder archive. `verify`, with the same arguments, also rebuilds with the builder's network egress blocked and exits 0 only when the rebuilt digest is the published one (docs/REBUILD.md).

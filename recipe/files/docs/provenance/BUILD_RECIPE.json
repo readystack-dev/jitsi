@@ -1,14 +1,14 @@
 {
   "schema": "kitforge.build_recipe.v1",
   "slug": "jitsi",
-  "image": "readystack/jitsi:stable-11248-CE-ubuntu24.04-r8",
+  "image": "readystack/jitsi:stable-11248-CE-ubuntu24.04-r9",
   "build_method": "source-rebuild-node",
   "source": {
     "repo": "https://github.com/jitsi/jitsi-meet",
     "ref": "stable/jitsi-meet_11248",
     "commit": "f765042bf280cbd7dcd4a9bbdb63b09e9e4d3259",
-    "source_date_epoch": 1795543181,
-    "source_date_epoch_provenance": "the time release stable-11248-CE-ubuntu24.04-r8 was cut (2026-11-24T17:59:41Z), by scripts/rerelease-agenda.py: ReadyStack dates an image by when its release was packaged (owner 2026-11-10), recorded here once and used by every rebuild of the release; it builds upstream commit f765042bf280, dated 2026-09-10T22:52:13Z (source.commit_epoch).",
+    "source_date_epoch": 1795672789,
+    "source_date_epoch_provenance": "the time release stable-11248-CE-ubuntu24.04-r9 was cut (2026-11-26T05:59:49Z), by scripts/rerelease-agenda.py: ReadyStack dates an image by when its release was packaged (owner 2026-11-10), recorded here once and used by every rebuild of the release; it builds upstream commit f765042bf280, dated 2026-09-10T22:52:13Z (source.commit_epoch).",
     "retarget_tag_pattern": "stable/jitsi-meet_(\\d+)",
     "node_version": "24",
     "node_dist": {
